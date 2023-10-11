@@ -24,7 +24,6 @@ Explain how to get started with your project. This could include installation in
 
 Provide a brief introduction to your project. Explain its purpose and what problem it solves. You can also include badges here.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -56,8 +55,6 @@ npm install npm@latest -g
    rosdep install --from-paths src --ignore-src -r -y
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->
@@ -67,7 +64,6 @@ npm install npm@latest -g
 roslaunch
 
 ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -77,8 +73,6 @@ roslaunch
 - [x] Add basic infrastructure
 - [ ] Add URReachENV
 - [ ] Add URPickAndPlaceEnv
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -96,7 +90,6 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -105,7 +98,6 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -114,7 +106,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Ammar Abbas - ammar.abbas@scch.at
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -122,4 +113,3 @@ Ammar Abbas - ammar.abbas@scch.at
 ## Acknowledgments
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
