@@ -1,0 +1,7 @@
+ur10_ikfast
+ur10e_ikfast
+ur3_ikfast
+ur3e_ikfast
+ur5_ikfast
+ur5e_ikfast
+ur_ikfast
