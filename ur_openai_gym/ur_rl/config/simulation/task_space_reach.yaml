@@ -1,0 +1,38 @@
+ur_gym: #namespace
+    # General Agent parameters
+    env_id: "UR5ReachEnv-v0"
+    driver: "gazebo"
+    reset_robot: False
+    ft_sensor: False
+    agent_control_dt: 0.005
+    reset_time: 0.05
+    rand_seed: 10  
+
+    # initial conditions
+    random_target_pose: False
+    cl_target_pose: False
+    random_initial_pose: False
+    curriculum_learning: False
+    dist_cl: 50
+    rand_init_interval: 1
+
+    # for each dimension define upper and lower bound from initial pose
+    # workspace: [[-0.18, -0.08], [0.33, 0.42], [0.15, 0.25], [-0.05, 0.05], [1.0, 1.5], [0.0, 3.15]]
+    init_q: [1.57, -1.57, 1.75, -1.75, -1.57, 0.00]
+
+    # target
+    # target_pose: [-0.588e-01,  4.89186592e-01,  5.84219817e-01,  9.88073323e-01, -3.32191650e-04, -3.32072335e-04, -1.53983403e-01]
+    # target_pose: [0.5, 0.55, 0.17, 0.99, 0.00, 0.00, 0.00]
+    goal_a: [0.75, -0.35, 0.93]
+    # goal_b: [-0.19,  0.55,  0.45]
+
+    # actions parameters 
+    n_actions: 3
+  
+    # Reward parameters
+    tgt_pose_indices: [0, 1, 2, 3, 4, 5]
+    distance_threshold: 0.05
+    reward_type: "dense"
+
+    rl:
+        steps_per_episode: 200
