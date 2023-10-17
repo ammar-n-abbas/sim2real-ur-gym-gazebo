@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<launch>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find rg2_gazebo)/config/position_controller.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node pkg="controller_manager" type="spawner" name="controller_spawner" respawn="false"
+	output="screen" ns="/rg2" args="joint_state_controller
+	                                gripper_joint_position" />
+</launch>

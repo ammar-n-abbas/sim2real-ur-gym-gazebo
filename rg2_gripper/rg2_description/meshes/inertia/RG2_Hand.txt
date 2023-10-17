@@ -1,0 +1,34 @@
+Mass properties of RG2_Base
+     Configuration: Default
+     Coordinate system: Coordinate System1
+
+Density = 2700.000000 kilograms per cubic meter
+
+Mass = 1.684558 kilograms
+
+Volume = 0.000624 cubic meters
+
+Surface area = 0.086117 square meters
+
+Center of mass: ( meters )
+	X = 0.061902
+	Y = 0.000129
+	Z = -0.000005
+
+Principal axes of inertia and principal moments of inertia: ( kilograms * square meters )
+Taken at the center of mass.
+	 Ix = ( 1.000000,  0.000134,  0.000261)   	Px = 0.000862
+	 Iy = ( 0.000133, -0.999997,  0.002318)   	Py = 0.002401
+	 Iz = ( 0.000261, -0.002318, -0.999997)   	Pz = 0.002620
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the center of mass and aligned with the output coordinate system.
+	Lxx = 0.000862	Lxy = 0.000000	Lxz = 0.000000
+	Lyx = 0.000000	Lyy = 0.002401	Lyz = -0.000001
+	Lzx = 0.000000	Lzy = -0.000001	Lzz = 0.002620
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the output coordinate system.
+	Ixx = 0.000862	Ixy = 0.000014	Ixz = 0.000000
+	Iyx = 0.000014	Iyy = 0.008856	Iyz = -0.000001
+	Izx = 0.000000	Izy = -0.000001	Izz = 0.009075

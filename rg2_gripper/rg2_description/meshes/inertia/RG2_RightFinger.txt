@@ -1,0 +1,34 @@
+Mass properties of RG2_RightFinger
+     Configuration: Default
+     Coordinate system: Coordinate System1
+
+Density = 2700.000000 kilograms per cubic meter
+
+Mass = 0.081637 kilograms
+
+Volume = 0.000030 cubic meters
+
+Surface area = 0.010245 square meters
+
+Center of mass: ( meters )
+	X = 0.024695
+	Y = 0.010178
+	Z = -0.010000
+
+Principal axes of inertia and principal moments of inertia: ( kilograms * square meters )
+Taken at the center of mass.
+	 Ix = ( 0.967282,  0.253705,  0.000002)   	Px = 0.000004
+	 Iy = ( 0.000000, -0.000005,  1.000000)   	Py = 0.000026
+	 Iz = ( 0.253705, -0.967282, -0.000004)   	Pz = 0.000027
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the center of mass and aligned with the output coordinate system.
+	Lxx = 0.000006	Lxy = 0.000005	Lxz = 0.000000
+	Lyx = 0.000005	Lyy = 0.000025	Lyz = 0.000000
+	Lzx = 0.000000	Lzy = 0.000000	Lzz = 0.000026
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the output coordinate system.
+	Ixx = 0.000022	Ixy = 0.000026	Ixz = -0.000020
+	Iyx = 0.000026	Iyy = 0.000083	Iyz = -0.000008
+	Izx = -0.000020	Izy = -0.000008	Izz = 0.000084
