@@ -1,6 +1,10 @@
 # Sim2Real Implementation: Gymnasium-Gazebo UREnv for Deep Reinforcement Learning
 
-Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface
+Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based on: 
+[openai_ros](https://bitbucket.org/theconstructcore/openai_ros/src/kinetic-devel/), 
+[ur_openai_gym](https://github.com/cambel/ur_openai_gym),
+[rg2_simulation](https://github.com/ekorudiawan/rg2_simulation),
+[gazeboo_grasp_fix_plugin](https://github.com/JenniferBuehler/gazebo-pkgs/wiki/The-Gazebo-grasp-fix-plugin)
 
 ## Table of Contents
 
