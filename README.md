@@ -11,18 +11,10 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface
 - [License](#license)
 
 
-
-## Getting Started
-
-Explain how to get started with your project. This could include installation instructions, dependencies, or prerequisites. Be sure to make it clear and easy to follow.
-
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Provide a brief introduction to your project. Explain its purpose and what problem it solves. You can also include badges here.
+Using Deep reinforcement Learning for robotics case study with the main motivation of moving fro sim2real with safety-critical systems.
 
 
 
@@ -30,15 +22,14 @@ Provide a brief introduction to your project. Explain its purpose and what probl
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 ```sh
-npm install npm@latest -g
+sudo apt-get install ros-noetic-desktop-full
 ```
+
 
 ### Installation
 
@@ -56,14 +47,13 @@ npm install npm@latest -g
    ```
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 ```
-roslaunch
-
+roslaunch ur_gazebo ur5_with_gripper_bringup.launch
 ```
+
 
 
 
@@ -73,6 +63,7 @@ roslaunch
 - [x] Add basic infrastructure
 - [x] Add URReachENV
 - [x] Add URPickAndPlaceEnv
+
 
 
 
@@ -111,5 +102,5 @@ Ammar Abbas - ammar.abbas@scch.at
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
+This project is part of the research activities done along Collaborative Intelligence for Safety-Critical systems (CISC) project that has received funding from the European Union’s Horizon 2020 Research and Innovation Programme under the Marie Skłodowska-Curie grant agreement no. 955901. (cicproject.eu)
 
