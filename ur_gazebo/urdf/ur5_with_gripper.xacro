@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="imr_cell">
+
+  <!-- ros_control plugin -->
+  <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace></robotNamespace>
+      </plugin>
+  </gazebo>
+  
+  <!-- Joint state publisher plugin -->
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+        <jointName>elbow_joint, shoulder_lift_joint, shoulder_pan_joint, wrist_1_joint, wrist_2_joint, wrist_3_joint</jointName>
+        <updateRate>125</updateRate>
+    </plugin>
+  </gazebo>
+
+  <!-- <gazebo reference="imr_cell">
+        <selfCollide>true</selfCollide>
+  </gazebo> -->
+
+
+  <gazebo>
+      <plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
+              <arm>
+              <arm_name>gripperRG2</arm_name>
+              <palm_link>wrist_3_link</palm_link>
+              <gripper_link>l_finger_link</gripper_link>
+              <gripper_link>r_finger_link</gripper_link>
+              </arm>
+          <forces_angle_tolerance>90</forces_angle_tolerance>
+          <update_rate>0.05</update_rate>
+          <grip_count_threshold>2</grip_count_threshold>
+          <max_grip_count>8</max_grip_count>
+          <release_tolerance>0.05</release_tolerance>
+          <disable_collisions_on_attach>true</disable_collisions_on_attach>
+          <contact_topic>__default_topic__</contact_topic>
+          </plugin>
+  </gazebo>
+
+
+  <link name="world"/>
+   
+  <!-- import robot + parameter if needed -->
+  <xacro:include filename="$(find ur_description)/urdf/ur5.xacro"/>
+  <!-- <xacro:ur5_robot prefix="" /> -->
+
+  <link name = "imr_cell">
+	<inertial>
+	  <mass value="10"/>
+	  <pose frame='0 0 0 0 0 0' />
+	  <inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+	</inertial>
+    <visual>
+      <origin xyz= "0 0 0" rpy= "0 0 0"/>
+      <geometry>
+        <mesh filename="package://ur_description/meshes/imr_cell/imr_cell_visual.dae"/>
+      </geometry>
+      <material name="cell">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz= "0 0 0" rpy= "0 0 0"/>
+      <geometry>
+        <mesh filename="package://ur_description/meshes/imr_cell/imr_cell_collision.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="world_cell" type="fixed">
+    <parent link="world" />
+    <child link = "imr_cell" />
+    <origin xyz= "0 0 0" rpy= "0 0 0"/>
+  </joint>
+
+
+  <!-- defining robot position in world frame -->  
+  <joint name="imr_base_joint" type="fixed">
+    <parent link="imr_cell" />
+    <child link = "base_link" />
+    <origin xyz= "0.163 -0.72 0.845" rpy= "0 0 -1.57"/>
+  </joint>
+  
+
+  <xacro:include filename="$(find rg2_description)/urdf/rg2.urdf.xacro"/>
+  <xacro:gripperRG2 prefix="" connected_to="tool0"/>
+  
+  
+  <!-- defining camera position in world frame -->  
+  <link name="base_camera"/>
+  <joint name="camera_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_camera"/>
+    <origin xyz= "0.5256 -0.3543 1.802" rpy= "0 ${pi*0.5} 0"/>
+  </joint>
+  
+  <link name="optical_frame"/>
+  <joint name="optical_joint" type="fixed">
+    <origin xyz="0.065 0.062 0.0445" rpy="-${0.5*pi} 0 -${0.5*pi + 8.5/180*pi}"/>
+    <parent link="base_camera"/>
+    <child link="optical_frame"/>
+  </joint>
+
+  
+</robot>
+
+  
+ 

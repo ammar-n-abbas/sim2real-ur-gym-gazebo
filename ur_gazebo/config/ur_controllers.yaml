@@ -1,0 +1,149 @@
+# Joint state controller
+joint_state_controller:
+  publish_rate: 125
+  type: joint_state_controller/JointStateController
+
+scaled_pos_joint_traj_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+     - shoulder_pan_joint
+     - shoulder_lift_joint
+     - elbow_joint
+     - wrist_1_joint
+     - wrist_2_joint
+     - wrist_3_joint  
+  constraints:
+    # Default is 0
+    goal_time: 0.1
+    # Default is 0.01
+    stopped_velocity_tolerance: 0.01
+    shoulder_pan_joint:
+      trajectory: 0
+      goal: 0.01
+    shoulder_lift_joint:
+      trajectory: 0
+      goal: 0.01
+    elbow_joint:
+      trajectory: 0
+      goal: 0.01
+    wrist_1_joint:
+      trajectory: 0
+      goal: 0.01
+    wrist_2_joint:
+      trajectory: 0
+      goal: 0.01
+    wrist_3_joint:
+      trajectory: 0
+      goal: 0.01
+
+joint_group_pos_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: &robot_joints
+    - shoulder_pan_joint
+    - shoulder_lift_joint
+    - elbow_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+
+joint_trajectory_controller:
+  type: position_controllers/JointTrajectoryController
+  publish_rate: 25
+  joints:
+     - shoulder_pan_joint
+     - shoulder_lift_joint
+     - elbow_joint
+     - wrist_1_joint
+     - wrist_2_joint
+     - wrist_3_joint
+
+shoulder_pan_joint:
+  type: position_controllers/JointPositionController
+  joint: shoulder_pan_joint
+shoulder_lift_joint:
+  type: position_controllers/JointPositionController
+  joint: shoulder_lift_joint
+elbow_joint:
+  type: position_controllers/JointPositionController
+  joint: elbow_joint
+wrist_1_joint:
+  type: position_controllers/JointPositionController
+  joint: wrist_1_joint
+wrist_2_joint:
+  type: position_controllers/JointPositionController
+  joint: wrist_2_joint
+wrist_3_joint:
+  type: position_controllers/JointPositionController
+  joint: wrist_3_joint
+
+
+gripper_joint_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: gripper_joint
+  pid: {p: 5, i: 0.0, d: 0.0}
+# l_finger_2_joint_position:
+#   type: effort_controllers/JointPositionController
+#   joint: l_finger_2_joint
+#   pid: {p: 5, i: 0.0, d: 0.0}
+# l_finger_passive_joint_position:
+#   type: effort_controllers/JointPositionController
+#   joint: l_finger_passive_joint
+#   pid: {p: 5, i: 0.0, d: 0.0}
+# r_finger_1_joint_position:
+#   type: effort_controllers/JointPositionController
+#   joint: r_finger_1_joint
+#   pid: {p: 5, i: 0.0, d: 0.0}
+# r_finger_2_joint_position:
+#   type: effort_controllers/JointPositionController
+#   joint: r_finger_2_joint
+#   pid: {p: 5, i: 0.0, d: 0.0}
+# r_finger_passive_joint_position:
+#   type: effort_controllers/JointPositionController
+#   joint: r_finger_passive_joint
+#   pid: {p: 5, i: 0.0, d: 0.0}
+
+
+gazebo_ros_control:
+  pid_gains:
+    gripper_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    l_finger_2_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    l_finger_passive_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    r_finger_1_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    r_finger_2_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    r_finger_passive_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur5_with_gripper">
+  
+  <!-- Create world link -->
+  <link name="world" />
+  
+  <!-- import robot + parameter if needed -->
+  <xacro:include filename="$(find package_name)/urdf/robot.xacro"/>
+  <xacro:robot parameters="..." />
+
+  <!-- defining robot position in world frame -->
+
+  <joint name="world_to_robot_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" /> <!-- to define if different of base_link -->
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+  </joint>
+    
+  <!-- import gripper/tool + parameter if needed -->
+  <xacro:include filename="$(find package_name)/urdf/gripper_tool.xacro"/>
+  <xacro:gripper_tool parameters="..." />
+  
+  <!-- define TCP endeffector-->
+  <link name="TCP_link"/>
+  <joint name="TCP_joint" type="fixed">
+    <parent link="tool0" /> <!-- to define with last robot link -->
+    <child link = "TCP_link" />
+    <origin xyz="x y z" rpy="r p y" /> <!-- to define -->
+  </joint>  
+  
+  <!-- import sensor/camera + parameter if needed -->
+  <xacro:include filename="$(find package_name)/urdf/camera.xacro" />
+  <xacro:camera parameters="..."/>
+  
+  <!-- import cell + define parameter -->
+  <xacro:include filename="$(find package_name)/urdf/cell.xacro"/>
+  <xacro:cell prefix="" stl_file="..."> <!-- define stl_file -->
+    <origin xyz="x y z" rpy="r p y"/> <!-- to define -->
+  </xacro:cell>
+
+</robot>

@@ -1,0 +1,89 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: &loop_hz 125
+
+scaled_pos_joint_traj_controller:
+  type: position_controllers/JointTrajectoryController
+  joints: &robot_joints
+    - shoulder_pan_joint
+    - shoulder_lift_joint
+    - elbow_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.05
+    shoulder_pan_joint: {trajectory: 0.1, goal: 0.1}
+    shoulder_lift_joint: {trajectory: 0.1, goal: 0.1}
+    elbow_joint: {trajectory: 0.1, goal: 0.1}
+    wrist_1_joint: {trajectory: 0.1, goal: 0.1}
+    wrist_2_joint: {trajectory: 0.1, goal: 0.1}
+    wrist_3_joint: {trajectory: 0.1, goal: 0.1}
+  stop_trajectory_duration: 0.5
+  state_publish_rate: *loop_hz
+  action_monitor_rate: 10
+
+joint_group_pos_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: *robot_joints
+
+
+rg2:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 125  
+  
+  # Position Controllers ---------------------------------------
+  
+  gripper_joint_position:
+    type: effort_controllers/JointPositionController
+    joint: gripper_joint
+    pid: {p: 5, i: 0.0, d: 0.0}
+
+
+gazebo_ros_control:
+  pid_gains:
+    gripper_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    l_finger_2_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    l_finger_passive_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    r_finger_1_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    r_finger_2_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
+    r_finger_passive_joint:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+      i_clamp: 0.2
+      antiwindup: false
+      publish_state: true
