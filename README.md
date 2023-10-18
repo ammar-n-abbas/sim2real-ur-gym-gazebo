@@ -71,8 +71,8 @@ roslaunch
 ## Roadmap
 
 - [x] Add basic infrastructure
-- [ ] Add URReachENV
-- [ ] Add URPickAndPlaceEnv
+- [x] Add URReachENV
+- [x] Add URPickAndPlaceEnv
 
 
 
