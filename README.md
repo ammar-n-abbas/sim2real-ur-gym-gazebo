@@ -1,4 +1,5 @@
-# Sim2Real Implementation: Gymnasium-Gazebo UREnv for Deep Reinforcement Learning
+# Sim2Real Implementation: Gymnasium-Gazebo UREnv for Deep Reinforcement Learning With Reach, Grasp, and Pick&Place Environment with Collision Avoidance (Object or Human)
+
 
 Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based on: 
 [openai_ros](https://bitbucket.org/theconstructcore/openai_ros/src/kinetic-devel/), 
