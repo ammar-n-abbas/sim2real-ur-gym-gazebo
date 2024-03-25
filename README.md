@@ -65,7 +65,8 @@ roslaunch ur_gazebo ur5_with_gripper_bringup.launch
 ## Roadmap
 
 - [x] Add basic infrastructure
-- [x] Add URReachENV
+- [x] Add URReachEnv
+- [x] Add URGraspEnv
 - [x] Add URPickAndPlaceEnv
 
 
