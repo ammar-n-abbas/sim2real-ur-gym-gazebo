@@ -1,0 +1,43 @@
+ur_gym: #namespace
+    # General Agent parameters
+    env_id: "UR5PickAndPlaceRealEnv-v0"
+    driver: "robot"
+    reset_robot: False
+    ft_sensor: False
+    agent_control_dt: 0.1
+    reset_time: 3
+    rand_seed: 10  
+
+    # initial conditions
+    random_target_pose: False
+    random_initial_pose: False
+    random_cube_pose: False
+    rand_init_interval: 1
+
+    # for each dimension define upper and lower bound from initial pose
+    # workspace: [[-0.18, -0.08], [0.33, 0.42], [0.15, 0.25], [-0.05, 0.05], [1.0, 1.5], [0.0, 3.15]]
+    # init_q: [1.57, -1.79, 1.99, -1.96, -1.57, 0.00]
+    init_q: [90.0, -90.0, 90.0, -90.0, -90.0, 0.0]
+
+    # target
+    cube_pose_base_link: [0, 0, 0, 0, 0, 0, 0]
+    # goal_a: [-0.0096, 0.487, 0.07286, -1.1064850757576177e-06, 3.139613181366818e-06, -0.707391279079983, 0.7068221687740877]
+    goal_b: [-0.19,  0.55,  0.45]
+
+    # actions parameters 
+    n_actions: 4
+  
+    # success parameters
+    distance_threshold: 0.05
+    proper_grasp_threshold: 0.01
+
+    # reward parameters
+    reward_type: "dense"
+    speed_cost: 0.5
+    ik_cost: 1.0
+    collision_cost: 1.0
+    grip_rew: 0.5
+    grip_prop_rew: 1.0
+
+    rl:
+        steps_per_episode: 500
