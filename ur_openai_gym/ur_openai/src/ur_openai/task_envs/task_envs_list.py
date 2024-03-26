@@ -3,7 +3,6 @@ import gymnasium as gym
 from gymnasium.envs.registration import register
 from gymnasium import envs
 
-
 def register_environment(task_env, max_episode_steps=10000):
     """
     Registers all the ENVS supported in OpenAI ROS. This way we can load them
@@ -44,6 +43,28 @@ def register_environment(task_env, max_episode_steps=10000):
         register(
             id=task_env,
             entry_point='ur_openai.task_envs.ur5_task_space_pick_and_place:UR5PickAndPlaceEnv',
+            max_episode_steps=max_episode_steps,
+        )
+
+        # import our training environment
+        from ur_openai.task_envs import ur5_task_space_pick_and_place
+
+    elif task_env == 'UR5PickAndPlaceEnvNonDict-v0':
+
+        register(
+            id=task_env,
+            entry_point='ur_openai.task_envs.ur5_task_space_pick_and_place_nondict:UR5PickAndPlaceEnv',
+            max_episode_steps=max_episode_steps,
+        )
+
+        # import our training environment
+        from ur_openai.task_envs import ur5_task_space_pick_and_place
+
+    elif task_env == 'UR5GraspEnv-v0':
+
+        register(
+            id=task_env,
+            entry_point='ur_openai.task_envs.ur5_task_space_grasp:UR5GraspEnv',
             max_episode_steps=max_episode_steps,
         )
 
