@@ -22,11 +22,34 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 
 ## Table of Contents
 
-- [About](#about-the-project)
+- [About The Project](#about-the-project)
 - [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 - [Usage](#usage)
+  - [Launch Gazebo Simulation and Spawn the UR in the World](#launch-gazebo-simulation-and-spawn-the-ur-in-the-world)
+  - [UR Gym Configuration YAML File](#ur-gym-configuration-yaml-file)
+    - [General Agent Parameters](#general-agent-parameters)
+    - [Initial Conditions](#initial-conditions)
+    - [Workspace and Initial Pose](#workspace-and-initial-pose)
+    - [Object Properties](#object-properties)
+    - [Anomalies](#anomalies)
+    - [Validations](#validations)
+    - [Target](#target)
+    - [Actions Parameters](#actions-parameters)
+    - [Success Parameters](#success-parameters)
+    - [Penalty Threshold](#penalty-threshold)
+    - [Reward Parameters](#reward-parameters)
+    - [Reinforcement Learning (RL)](#reinforcement-learning-rl)
+  - [Training Script for TQC (Truncated Quantile Critic) Algorithm](#training-script-for-tqc-truncated-quantile-critic-algorithm)
+    - [Arguments](#arguments)
+    - [Example](#example)
+- [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
 
 
 <!-- ABOUT THE PROJECT -->
@@ -157,9 +180,9 @@ This YAML file (`ur_gym.yaml`) contains configuration parameters for the UR Gym 
 - `steps_per_episode`: Number of steps per episode for RL training.
 
   
-### Training Script for TQC (Top Quantile Critic) Algorithm
+### Training Script for TQC (Truncated Quantile Critic) Algorithm
 
-This script (`start_training_tqc.py`) allows you to train an agent using the TQC algorithm in various OpenAI Gym environments.
+This script (`start_training_tqc.py`), taken from [SamsungLabs/tqc_pytorch](https://github.com/SamsungLabs/tqc_pytorch), allows you to train an agent using the TQC algorithm in various OpenAI Gym environments.
 
 
 ```bash
