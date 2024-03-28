@@ -68,11 +68,95 @@ sudo apt-get install ros-noetic-desktop-full
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### Launch Gazebo Simulation and Spawn the UR in the World
+
 ```
 roslaunch ur_gazebo ur5_with_gripper_bringup.launch
 ```
 
+### UR Gym Configuration YAML File
 
+This YAML file (`ur_gym.yaml`) contains configuration parameters for the UR Gym environment.
+
+#### General Agent Parameters
+
+- `env_id`: Specifies the OpenAI Gym environment ID.
+- `driver`: Indicates the driver used, such as "gazebo".
+- `reset_robot`: Determines whether to reset the robot.
+- `ft_sensor`: Specifies whether to use force/torque sensors.
+- `agent_control_dt`: Time step for controlling the agent.
+- `reset_time`: Time allocated for resetting the environment.
+- `rand_seed`: Seed for random number generation.
+
+#### Initial Conditions
+
+- `random_cube_pose`: Determines if the initial cube pose is randomized.
+- `random_target_pose`: Determines if the initial target pose is randomized.
+- `random_initial_pose`: Determines if the initial robot pose is randomized.
+- `cl_target_pose`: Specifies if the target pose is controlled.
+- `dist_cl`: Distance for controlling the target pose.
+- `rand_init_interval`: Interval for random initialization.
+
+#### Workspace and Initial Pose
+
+- `workspace`: Defines the workspace bounds.
+- `init_q`: Initial joint configuration.
+
+#### Object Properties
+
+- `cube_size`: Size of the cube.
+
+#### Anomalies
+
+- `object_disturbance`: Indicates whether object disturbance is enabled.
+- `random_object_disturbance`: Specifies if random object disturbance is enabled.
+- `hrc_disturbance`: Indicates whether human-robot collaboration disturbance is enabled.
+- `random_hrc_disturbance`: Specifies if random human-robot collaboration disturbance is enabled.
+
+#### Validations
+
+- `sil_validation`: Specifies whether to perform SIL (Software-in-the-loop) validation.
+
+#### Target
+
+- `goal_a`: Position of goal A.
+- `goal_b`: Position of goal B.
+
+#### Actions Parameters
+
+- `n_actions`: Number of actions.
+
+#### Success Parameters
+
+- `distance_threshold`: Threshold for successful distance.
+- `proper_grasp_threshold`: Threshold for proper grasp.
+
+#### Penalty Threshold
+
+- `vel_thresh`: Velocity threshold.
+- `force_thresh`: Force threshold.
+
+#### Reward Parameters
+
+- `reward_type`: Type of reward.
+- `speed_cost`: Cost for speed.
+- `ik_cost`: Cost for inverse kinematics.
+- `collision_cost`: Cost for collision.
+- `coll_vel_cost`: Cost for collision velocity.
+- `cube_collision_cost`: Cost for cube collision.
+- `cube_coll_vel_cost`: Cost for cube collision velocity.
+- `bar_dist_collision_cost`: Cost for bar distance collision.
+- `gripper_cost`: Cost for gripper.
+- `grip_rew`: Reward for gripping.
+- `grip_prop_rew`: Proportional reward for gripping.
+- `place_rew`: Reward for placing.
+- `rew_scale_factor`: Scaling factor for rewards.
+
+#### Reinforcement Learning (RL)
+
+- `steps_per_episode`: Number of steps per episode for RL training.
+
+  
 ### Training Script for TQC (Top Quantile Critic) Algorithm
 
 This script (`start_training_tqc.py`) allows you to train an agent using the TQC algorithm in various OpenAI Gym environments.
@@ -108,7 +192,6 @@ rosrun start_training_tqc.py --env UR5PickandPlaceEnv-v0 --eval_freq 10000 --max
 ```
 
 This command runs the training script using the "UR5PickandPlaceEnv-v0" environment, evaluating the agent's performance every 10,000 time steps, training for a maximum of 2,000,000 time steps, with a random seed of 42, and saving the trained model and optimizer parameters.
-
 
 
 <!-- ROADMAP -->
