@@ -73,7 +73,7 @@ roslaunch ur_gazebo ur5_with_gripper_bringup.launch
 ```
 
 
-# Training Script for TQC (Top Quantile Critic) Algorithm
+### Training Script for TQC (Top Quantile Critic) Algorithm
 
 This script (`start_training_tqc.py`) allows you to train an agent using the TQC algorithm in various OpenAI Gym environments.
 
@@ -85,7 +85,7 @@ rosrun start_training_tqc.py [--env ENV] [--eval_freq EVAL_FREQ] [--max_timestep
                              [--prefix PREFIX] [--save_model]
 ```
 
-### Arguments
+#### Arguments
 
 - `--env`: (Default: "UR5PickandPlaceEnv-v0") The name of the OpenAI Gym environment.
 - `--eval_freq`: (Default: 5000) Frequency (in time steps) at which to evaluate the agent's performance.
@@ -101,7 +101,7 @@ rosrun start_training_tqc.py [--env ENV] [--eval_freq EVAL_FREQ] [--max_timestep
 - `--prefix`: (Default: "") Prefix to add to log and model filenames.
 - `--save_model`: (Default: True) Flag to save trained model and optimizer parameters.
 
-## Example
+#### Example
 
 ```bash
 rosrun start_training_tqc.py --env UR5PickandPlaceEnv-v0 --eval_freq 10000 --max_timesteps 2000000 --seed 42 --save_model
