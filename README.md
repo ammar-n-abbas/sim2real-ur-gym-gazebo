@@ -7,6 +7,12 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 [rg2_simulation](https://github.com/ekorudiawan/rg2_simulation), and
 [gazeboo_grasp_fix_plugin](https://github.com/JenniferBuehler/gazebo-pkgs/wiki/The-Gazebo-grasp-fix-plugin)
 
+![Sim2Real zero-shot transfer of grasping policy using safe-DRL](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png)
+![Environment with obstacle avoidance](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obstacle.jpeg)
+![Arm collision avoidance for human-robot collaboration top-view](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_top_view.jpeg)
+![Arm collision avoidance for human-robot collaboration front-view](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_front_view.jpeg)
+
+
 ## Table of Contents
 
 - [About](#about-the-project)
@@ -19,7 +25,7 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Using Deep reinforcement Learning for robotics case study with the main motivation of moving fro sim2real with safety-critical systems.
+Using Deep reinforcement Learning for a robotics case study with the main motivation of moving from sim2real with safety-critical systems.
 
 
 
@@ -76,7 +82,7 @@ roslaunch ur_gazebo ur5_with_gripper_bringup.launch
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -108,5 +114,5 @@ Ammar Abbas - ammar.abbas@scch.at
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-This project is part of the research activities done along Collaborative Intelligence for Safety-Critical systems (CISC) project that has received funding from the European Union’s Horizon 2020 Research and Innovation Programme under the Marie Skłodowska-Curie grant agreement no. 955901. (cicproject.eu)
+This project is part of the research activities done along the Collaborative Intelligence for Safety-Critical systems (CISC) project that has received funding from the European Union’s Horizon 2020 Research and Innovation Programme under the Marie Skłodowska-Curie grant agreement no. 955901. (cicproject.eu)
 
