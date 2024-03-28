@@ -71,7 +71,9 @@ sudo apt-get install ros-noetic-desktop-full
 ```
 roslaunch ur_gazebo ur5_with_gripper_bringup.launch
 ```
-
+```
+rosrun start_training_tqc.py
+```
 
 
 
