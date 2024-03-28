@@ -7,11 +7,21 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 [rg2_simulation](https://github.com/ekorudiawan/rg2_simulation), and
 [gazeboo_grasp_fix_plugin](https://github.com/JenniferBuehler/gazebo-pkgs/wiki/The-Gazebo-grasp-fix-plugin)
 
-![Sim2Real zero-shot transfer of grasping policy using safe-DRL](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png)
-![Environment with obstacle avoidance](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obstacle.jpeg)
-![Arm collision avoidance for human-robot collaboration top-view](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_top_view.jpeg)
-![Arm collision avoidance for human-robot collaboration front-view](https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_front_view.jpeg)
+<p align="center">
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="600">
+</p>
 
+<p align="center">
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obstacle.jpeg" alt="Environment with obstacle avoidance" width="300">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_top_view.jpeg" alt="Arm collision avoidance for human-robot collaboration top-view" width="400">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_front_view.jpeg" alt="Arm collision avoidance for human-robot collaboration front-view" width="400">
+</p>
 
 ## Table of Contents
 
