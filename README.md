@@ -8,7 +8,7 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 [gazeboo_grasp_fix_plugin](https://github.com/JenniferBuehler/gazebo-pkgs/wiki/The-Gazebo-grasp-fix-plugin)
 
 <p align="center">
-  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="650"><br>
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="700"><br>
   <em>Sim2Real zero-shot transfer of grasping policy using safe-DRL</em>
 </p>
 
