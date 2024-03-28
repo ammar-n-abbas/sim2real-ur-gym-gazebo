@@ -71,9 +71,43 @@ sudo apt-get install ros-noetic-desktop-full
 ```
 roslaunch ur_gazebo ur5_with_gripper_bringup.launch
 ```
+
+
+# Training Script for TQC (Top Quantile Critic) Algorithm
+
+This script (`start_training_tqc.py`) allows you to train an agent using the TQC algorithm in various OpenAI Gym environments.
+
+
+```bash
+rosrun start_training_tqc.py [--env ENV] [--eval_freq EVAL_FREQ] [--max_timesteps MAX_TIMESTEPS]
+                             [--seed SEED] [--n_quantiles N_QUANTILES] [--top_quantiles_to_drop_per_net TOP_QUANTILES_TO_DROP_PER_NET]
+                             [--n_nets N_NETS] [--batch_size BATCH_SIZE] [--discount DISCOUNT] [--tau TAU] [--log_dir LOG_DIR]
+                             [--prefix PREFIX] [--save_model]
 ```
-rosrun start_training_tqc.py
+
+### Arguments
+
+- `--env`: (Default: "UR5PickandPlaceEnv-v0") The name of the OpenAI Gym environment.
+- `--eval_freq`: (Default: 5000) Frequency (in time steps) at which to evaluate the agent's performance.
+- `--max_timesteps`: (Default: 10000000000) Maximum number of time steps to run the environment.
+- `--seed`: (Default: 0) Seed for random number generation.
+- `--n_quantiles`: (Default: 25) Number of quantile samples to draw for each state-action pair.
+- `--top_quantiles_to_drop_per_net`: (Default: 2) Number of top quantiles to drop per network.
+- `--n_nets`: (Default: 5) Number of critic networks to use.
+- `--batch_size`: (Default: 256) Batch size for both the actor and critic networks.
+- `--discount`: (Default: 0.99) Discount factor for future rewards.
+- `--tau`: (Default: 0.005) Rate at which to update target networks.
+- `--log_dir`: (Default: "") Directory to save logs and trained models.
+- `--prefix`: (Default: "") Prefix to add to log and model filenames.
+- `--save_model`: (Default: True) Flag to save trained model and optimizer parameters.
+
+## Example
+
+```bash
+rosrun start_training_tqc.py --env UR5PickandPlaceEnv-v0 --eval_freq 10000 --max_timesteps 2000000 --seed 42 --save_model
 ```
+
+This command runs the training script using the "UR5PickandPlaceEnv-v0" environment, evaluating the agent's performance every 10,000 time steps, training for a maximum of 2,000,000 time steps, with a random seed of 42, and saving the trained model and optimizer parameters.
 
 
 
@@ -84,6 +118,8 @@ rosrun start_training_tqc.py
 - [x] Add URReachEnv
 - [x] Add URGraspEnv
 - [x] Add URPickAndPlaceEnv
+- [x] Add object disturbance scenario
+- [x] Add human arm disturbance scenario
 
 
 
