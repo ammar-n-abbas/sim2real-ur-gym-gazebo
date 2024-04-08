@@ -27,9 +27,9 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Task Space](#task-space)
-  - [State]
-  - [Action]
-  - [Reward] 
+  - [State](#state)
+  - [Action](#action)
+  - [Reward](#reward) 
 - [Usage](#usage)
   - [Launch Gazebo Simulation and Spawn the UR in the World](#launch-gazebo-simulation-and-spawn-the-ur-in-the-world)
   - [UR Gym Configuration YAML File](#ur-gym-configuration-yaml-file)
