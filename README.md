@@ -95,9 +95,7 @@ sudo apt-get install ros-noetic-desktop-full
 
 ### State
 
-The "state" refers to the current situation or configuration of the environment that the agent is interacting with. It includes relevant information as a set of variables or features necessary for the agent to make decisions and take action.
-
-In the `UR5Env` environment, the `state` is represented as a concatenation of various components that provide information about the current state of the robotic system. The state includes:
+The "state" refers to the current situation or configuration of the environment that the agent is interacting with. It includes relevant information as a set of variables or features necessary for the agent to make decisions and take action. In the `UR5Env` environment, the `state` is represented as a concatenation of various components that provide information about the current state of the robotic system. The state includes:
 
 - Disturbance position (if applicable).
 - Joint angles of the UR5 robotic arm.
@@ -106,16 +104,12 @@ In the `UR5Env` environment, the `state` is represented as a concatenation of va
 
 ### Action
 
-The "action" represents the decisions or moves an agent can take within a given environment. Actions are the choices available to the agent at any given state, and the goal of the reinforcement learning algorithm is to learn a policy that maps states to optimal actions.
-
-The `action` in the `UR5Env` environment represents the desired continuous changes to the end effector position (XYZ) and gripper control (G). The 4-dimensional action vector corresponds to:
-
-<!-- 
-- X: Translation in the X-axis.
-- Y: Translation in the Y-axis.
-- Z: Translation in the Z-axis.
-- G: Gripper action (open or close)
--->
+The "action" represents the decisions or moves an agent can take within a given environment. Actions are the choices available to the agent at any given state, and the goal of the reinforcement learning algorithm is to learn a policy that maps states to optimal actions. The `action` in the `UR5Env` environment represents the desired continuous changes to the end effector position (XYZ) and gripper control (G). The 4-dimensional action vector corresponds to:
+ 
+- X: Translation in the X-axis (resolution: 0.001m).
+- Y: Translation in the Y-axis (resolution: 0.001m).
+- Z: Translation in the Z-axis (resolution: 0.001m).
+- G: Gripper action (binary: open or close)
 
 ### Reward
 
