@@ -121,9 +121,9 @@ The `action` in the `UR5Env` environment represents the desired continuous chang
 
 The objective of the reward function is to shape the agent's behavior to achieve desired outcomes during robotic tasks while maintaining safety standards. The reward function incorporates multiple factors, capturing aspects such as goal attainment, grasping quality, speed violations, velocity during collision violations, and collisions. It is designed to incentivize behaviors that lead to successful goal completion, and safe operation. Distinct penalties are imposed for undesired events, such as collisions or excessive speeds, while rewards are given for executing proper grasps. The modified reward function is expressed mathematically as shown in the equation below:
 
-\[
-\text{{reward}} = - d + g - s_c - c_c - c_{c_c} - g_c - c_v - b_{c_c} -ik_c
-\]
+$$
+\text{reward} = - d + g - s_c - c_c - c_{c_c} - g_c - c_v - b_{c_c} -ik_c
+$$
 
 Where,
 
