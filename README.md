@@ -26,6 +26,10 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+- [Task Space](#task-space)
+  - [State]
+  - [Action]
+  - [Reward] 
 - [Usage](#usage)
   - [Launch Gazebo Simulation and Spawn the UR in the World](#launch-gazebo-simulation-and-spawn-the-ur-in-the-world)
   - [UR Gym Configuration YAML File](#ur-gym-configuration-yaml-file)
@@ -86,6 +90,53 @@ sudo apt-get install ros-noetic-desktop-full
    ```sh
    rosdep install --from-paths src --ignore-src -r -y
    ```
+
+## Task Space
+
+### State
+
+The "state" refers to the current situation or configuration of the environment that the agent is interacting with. It includes relevant information as a set of variables or features necessary for the agent to make decisions and take action.
+
+In the `UR5Env` environment, the `state` is represented as a concatenation of various components that provide information about the current state of the robotic system. The state includes:
+
+- Disturbance position (if applicable).
+- Joint angles of the UR5 robotic arm.
+- End effector $-$ cube position error.
+- Cube velocity.
+
+### Action
+
+The "action" represents the decisions or moves an agent can take within a given environment. Actions are the choices available to the agent at any given state, and the goal of the reinforcement learning algorithm is to learn a policy that maps states to optimal actions.
+
+The `action` in the `UR5Env` environment represents the desired continuous changes to the end effector position (XYZ) and gripper control (G). The 4-dimensional action vector corresponds to:
+
+<!-- 
+- X: Translation in the X-axis.
+- Y: Translation in the Y-axis.
+- Z: Translation in the Z-axis.
+- G: Gripper action (open or close)
+-->
+
+### Reward
+
+The objective of the reward function is to shape the agent's behavior to achieve desired outcomes during robotic tasks while maintaining safety standards. The reward function incorporates multiple factors, capturing aspects such as goal attainment, grasping quality, speed violations, velocity during collision violations, and collisions. It is designed to incentivize behaviors that lead to successful goal completion, and safe operation. Distinct penalties are imposed for undesired events, such as collisions or excessive speeds, while rewards are given for executing proper grasps. The modified reward function is expressed mathematically as shown in the equation below:
+
+\[
+\text{{reward}} = - d + g - s_c - c_c - c_{c_c} - g_c - c_v - b_{c_c} -ik_c
+\]
+
+Where,
+
+- $d$: Distance between the end effector and the cube.
+- $g$: Reward for successfully grasping the object.
+- $g_c$: Penalty for failed grasp attempt.
+- $s_c$: Penalty for exceeding a predefined joint speed limit.
+- $ik_c$: Penalty for inverse kinematic solution failure.
+- $c_c$: Penalty for collisions with the environment.
+- $c_{c_c}$: Penalty for collisions with the cube.
+- $b_{c_c}$: Penalty for collisions with external disturbance.
+- $c_v$: Penalty for exceeding a predefined collision velocity.
+
 
 
 <!-- USAGE EXAMPLES -->
