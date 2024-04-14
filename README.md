@@ -13,10 +13,10 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
   <em>Sim2Real zero-shot transfer of trained policy using safe-DRL</em>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="750"><br>
   <em>Snapshot of Sim2Real zero-shot transfer of grasping policy using safe-DRL</em>
-</p>
+</p> -->
 
 <p align="center">
   <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obst_coll_sim.gif" alt="Environment with obstacle avoidance" width="250">
