@@ -8,13 +8,26 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 [gazeboo_grasp_fix_plugin](https://github.com/JenniferBuehler/gazebo-pkgs/wiki/The-Gazebo-grasp-fix-plugin)
 
 <p align="center">
-  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="750"><br>
-  <em>Sim2Real zero-shot transfer of grasping policy using safe-DRL</em>
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/pick_place_rviz.gif" alt="Pick and place policy visualization on Rviz" width="750"><br>
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/grasp_real.gif" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="750"><br>
+  <em>Sim2Real zero-shot transfer of trained policy using safe-DRL</em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obstacle.jpeg" alt="Environment with obstacle avoidance" width="250" height="280">
-  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_top_view.jpeg" alt="Arm collision avoidance for human-robot collaboration top-view" width="250" height="280">
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/sim2real_robot_grasp.png" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="750"><br>
+  <em>Snapshot of Sim2Real zero-shot transfer of grasping policy using safe-DRL</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obst_coll_sim.gif" alt="Environment with obstacle avoidance" width="750"><br>
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obst_coll_real_top" alt="Sim2Real zero-shot transfer of grasping policy with obstacle collision avoidance using safe-DRL top view" width="750"><br>
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obst_coll_real_side" alt="Sim2Real zero-shot transfer of grasping policy with obstacle collision avoidance using safe-DRL front view" width="750"><br>
+  <em>Sim2Real zero-shot transfer of grasping policy with obstacle collision avoidance policy using safe-DRL</em>
+</p>
+
+<p align="center">
+<!--   <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/obstacle.jpeg" alt="Environment with obstacle avoidance" width="250" height="280">
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_top_view.jpeg" alt="Arm collision avoidance for human-robot collaboration top-view" width="250" height="280"> -->
   <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/arm_front_view.jpeg" alt="Arm collision avoidance for human-robot collaboration front-view" width="250" height="280"><br>
   <em>Object or arm Collision avoidance for human-robot collaboration</em>
 </p>
