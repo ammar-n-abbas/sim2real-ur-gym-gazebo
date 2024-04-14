@@ -9,7 +9,7 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 
 <p align="center">
   <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/pick_place_rviz.gif" alt="Pick and place policy visualization on Rviz" width="300"><br>
-  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/grasp_real.gif" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="350"><br>
+  <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/grasp_real.gif" alt="Sim2Real zero-shot transfer of grasping policy using safe-DRL" width="300"><br>
   <em>Sim2Real zero-shot transfer of trained policy using safe-DRL</em>
 </p>
 
