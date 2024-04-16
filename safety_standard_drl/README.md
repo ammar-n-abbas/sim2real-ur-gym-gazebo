@@ -1,8 +1,6 @@
-# README
+# Variables Description 
 
-## Variables Description 
-
-### Simulation
+## Simulation
 
 - `episode_steps`: Number of steps taken in an episode.
 - `total_steps`: Total number of steps taken.
@@ -20,7 +18,7 @@
 - `return`: Total reward per episode (epoch).
 
 
-### Real
+## Real
 
 - `episode_steps`: Number of steps taken in an episode.
 - `total_steps`: Total number of steps taken.
