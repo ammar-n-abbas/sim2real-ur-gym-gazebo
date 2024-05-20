@@ -9,7 +9,7 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 
 https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/assets/28593585/f85a4985-b9f3-4c21-9f49-ce0a86b853ed
 <p align="center">
-<em>Simulation Testing</em>
+<em>Simulation Testing & Real-World Validation</em>
 </p>
 
 
