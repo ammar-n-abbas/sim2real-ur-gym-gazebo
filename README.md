@@ -6,7 +6,8 @@ Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based 
 [rg2_simulation](https://github.com/ekorudiawan/rg2_simulation), and
 [gazeboo_grasp_fix_plugin](https://github.com/JenniferBuehler/gazebo-pkgs/wiki/The-Gazebo-grasp-fix-plugin)
 
-https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/assets/28593585/49d6cde9-9729-48d6-8ada-5158fac72670
+
+https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/assets/28593585/f85a4985-b9f3-4c21-9f49-ce0a86b853ed
 <p align="center">
 <em>Simulation Testing</em>
 </p>
