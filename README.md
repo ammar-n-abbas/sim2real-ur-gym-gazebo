@@ -1,11 +1,14 @@
 # Sim2Real Implementation: Gymnasium-Gazebo UREnv for Deep Reinforcement Learning With Reach, Grasp, and Pick&Place Environment with Collision Avoidance (Object or Human)
 
-
 Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based on: 
 [openai_ros](https://bitbucket.org/theconstructcore/openai_ros/src/kinetic-devel/), 
 [ur_openai_gym](https://github.com/cambel/ur_openai_gym),
 [rg2_simulation](https://github.com/ekorudiawan/rg2_simulation), and
 [gazeboo_grasp_fix_plugin](https://github.com/JenniferBuehler/gazebo-pkgs/wiki/The-Gazebo-grasp-fix-plugin)
+
+
+https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/assets/28593585/49d6cde9-9729-48d6-8ada-5158fac72670
+
 
 <p align="center">
   <img src="https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/blob/master/assets/pick_place_rviz.gif" alt="Pick and place policy visualization on Rviz" width="275">
