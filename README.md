@@ -1,6 +1,6 @@
 # Sim2Real Implementation: Gymnasium-Gazebo UREnv for Deep Reinforcement Learning With Reach, Grasp, and Pick&Place Environment with Collision Avoidance (Object or Human)
 
-Universal Robot Environment for OpenAI Gymnasium and ROS Gazebo Interface based on: 
+Universal Robot Environment for Gymnasium and ROS Gazebo Interface based on: 
 [openai_ros](https://bitbucket.org/theconstructcore/openai_ros/src/kinetic-devel/), 
 [ur_openai_gym](https://github.com/cambel/ur_openai_gym),
 [rg2_simulation](https://github.com/ekorudiawan/rg2_simulation), and
@@ -167,7 +167,7 @@ This YAML file (`ur_gym.yaml`) contains configuration parameters for the UR Gym 
 
 #### General Agent Parameters
 
-- `env_id`: Specifies the OpenAI Gym environment ID.
+- `env_id`: Specifies the Gymnasium environment ID.
 - `driver`: Indicates the driver used, such as "gazebo".
 - `reset_robot`: Determines whether to reset the robot.
 - `ft_sensor`: Specifies whether to use force/torque sensors.
@@ -258,7 +258,7 @@ rosrun start_training_tqc.py [--env ENV] [--eval_freq EVAL_FREQ] [--max_timestep
 
 #### Arguments
 
-- `--env`: (Default: "UR5PickandPlaceEnv-v0") The name of the OpenAI Gym environment.
+- `--env`: (Default: "UR5PickandPlaceEnv-v0") The name of the Gymnasium environment.
 - `--eval_freq`: (Default: 5000) Frequency (in time steps) at which to evaluate the agent's performance.
 - `--max_timesteps`: (Default: 10000000000) Maximum number of time steps to run the environment.
 - `--seed`: (Default: 0) Seed for random number generation.
