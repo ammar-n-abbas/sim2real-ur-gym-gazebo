@@ -42,6 +42,7 @@ https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/assets/28593585/f85a4985
 ## Table of Contents
 
 - [About The Project](#about-the-project)
+- [Bibtex](#bibtex)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -81,6 +82,15 @@ https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/assets/28593585/f85a4985
 Using Deep reinforcement Learning for a robotics case study with the main motivation of moving from sim2real with safety-critical systems.
 
 
+<!-- BIBTEX -->
+## BibTex
+
+@inproceedings{Abbas2024,
+  author    = {AN Abbas and S Mehak and GC Chasparis and JD Kelleher and M Guilfoyle and MC Leva and ...},
+  title     = {Safety-Driven Deep Reinforcement Learning Framework for Cobots: A Sim2Real Approach},
+  booktitle = {International Conference on Control, Decision and Information Technologies},
+  year      = {2024}
+}
 
 
 <!-- GETTING STARTED -->
