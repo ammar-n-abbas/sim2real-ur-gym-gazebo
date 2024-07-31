@@ -87,7 +87,7 @@ Using Deep reinforcement Learning for a robotics case study with the main motiva
 
 ```
 @inproceedings{Abbas2024,
-  author    = {AN Abbas and S Mehak and GC Chasparis and JD Kelleher and M Guilfoyle and MC Leva and ...},
+  author    = {Abbas, Ammar N and Mehak, Shakra and Chasparis, Georgios C and Kelleher, John D and Guilfoyle, Michael and Leva, Maria Chiara and Ramasubramanian, Aswin K},
   title     = {Safety-Driven Deep Reinforcement Learning Framework for Cobots: A Sim2Real Approach},
   booktitle = {2024 IEEE/IFAC International Conference on Control, Decision and Information Technologies},
   year      = {2024}
