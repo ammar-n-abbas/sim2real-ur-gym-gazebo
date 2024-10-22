@@ -333,7 +333,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Ammar Abbas - ammar.abbas@scch.at
+Ammar Abbas - ammar.abbas@eu4m.eu
 
 
 
