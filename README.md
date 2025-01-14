@@ -38,6 +38,7 @@ https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo/assets/28593585/f85a4985
   <em>Object or arm Collision avoidance for human-robot collaboration</em>
 </p>
 
+[![Star History Chart](https://api.star-history.com/svg?repos=ammar-n-abbas/sim2real-ur-gym-gazebo&type=Date)](https://star-history.com/#ammar-n-abbas/sim2real-ur-gym-gazebo&Date)
 
 ## Table of Contents
 
